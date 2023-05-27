@@ -123,9 +123,49 @@ typeof(vornamen_2022$Anzahl) # double
 
 In the Excel file, all variables of the observations are stored in one cell with the character data type. When importing with read_csv(), the variables are correctly divided into columns, but they all retain the character data type. The type character is exactly correct for name and sex, but not for number. So I converted it with the as.numeric() function to double.
 
+## Exercise 3c)
 
-c)  Calculate the total number of babies born in Munich in 2022
-    and 2021. Which year had the bigger baby-boom?
+Calculate the total number of babies born in Munich in 2022 and 2021. 
+Which year had the bigger baby-boom?
+    
+```{r}
+
+# 2021
+
+#is.na(vornamen_2021$Anzahl)
+
+vornamen_2021$Anzahl <- ifelse(
+    is.na(vornamen_2021$Anzahl), 0, vornamen_2021$Anzahl)
+
+total_births_2021 <- sum(vornamen_2021$Anzahl)
+total_births_2021 # 11524	
+
+# 2022
+
+vornamen_2022$Anzahl <- ifelse(
+    is.na(vornamen_2022$Anzahl), 0, vornamen_2022$Anzahl)
+
+total_births_2022 <- sum(vornamen_2022$Anzahl)
+total_births_2022 # 9899
+
+# compare:
+
+compare_births <- function(total_births_2021, total_births_2022) {
+  
+  if (total_births_2021 > total_births_2022) {
+    result <- "2021 had the bigger baby-boom."
+  } else if (total_births_2022 > total_births_2021) {
+    result <- "2022 had the bigger baby-boom."
+  } else {
+    result <- "Both years had an equal number of births."
+  }
+  return(result)
+}
+
+compare_births()
+
+```
+
 
 d)  Add a new column `year` to both datasets which holds the correct
     year for each.
