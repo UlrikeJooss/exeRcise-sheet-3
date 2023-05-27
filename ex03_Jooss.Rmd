@@ -162,13 +162,25 @@ compare_births <- function(total_births_2021, total_births_2022) {
   return(result)
 }
 
-compare_births()
+compare_births(total_births_2021, total_births_2022)
 
 ```
 
+## Exercise 3d)
 
-d)  Add a new column `year` to both datasets which holds the correct
-    year for each.
+Add a new column `year` to both datasets which holds the correct year for each:
+
+```{r}
+
+vornamen_2021 <- vornamen_2021 %>%
+  mutate(year = 2021)
+
+vornamen_2022 <- vornamen_2022 %>%
+  mutate(year = 2022)
+
+
+```
+
 
 e)  Combine both datasets into one using `bind_rows()`.
 
