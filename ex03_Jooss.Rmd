@@ -81,7 +81,8 @@ Download the latest open datasets on given names ("Vornamen") from the
 open data repository of the city of Munich for the years `2022` and
 `2021`.
 
-Link: <https://opendata.muenchen.de/dataset/vornamen-von-neugeborenen>
+Link: 
+<https://opendata.muenchen.de/dataset/vornamen-von-neugeborenen>
 
 
 ## Exercise 3a) 
@@ -91,11 +92,37 @@ Download the data for both years and track it in git. For small
 Uploaded to Github and Pulled Down into may Project.  
 
 
-b)  Load the data for both years into R. Check the type of the count
-    variable ("Anzahl") and look into the data to determine why it is
-    not numeric? Fix the problem in an appropriate manner, it is OK if
-    some of the counts are inaccurate because of this. Explain your
-    solution and the repercussions.
+## Exercise 3b) 
+
+Load the data for both years into R. Check the type of the count variable ("Anzahl") and look into the data to determine why it is not numeric? Fix the problem in an appropriate manner, it is OK if some of the counts are inaccurate because of this. Explain your solution and the repercussions.
+
+
+```{r message=FALSE, warning=FALSE}
+
+# Loading Datasets:
+library(readr)
+
+vornamen_2021 <- read_csv("vornamen_2021.csv")
+vornamen_2022 <- read_csv("open_data_portal_2022.csv")
+
+typeof(vornamen_2021$Anzahl) # character
+typeof(vornamen_2022$Anzahl) # character
+
+library(tidyverse)
+
+vornamen_2021 <- vornamen_2021 %>% 
+    mutate(Anzahl = as.numeric(Anzahl))
+typeof(vornamen_2021$Anzahl) # double
+
+vornamen_2022 <- vornamen_2022 %>% 
+    mutate(Anzahl = as.numeric(Anzahl))
+typeof(vornamen_2022$Anzahl) # double
+
+
+```
+
+In the Excel file, all variables of the observations are stored in one cell with the character data type. When importing with read_csv(), the variables are correctly divided into columns, but they all retain the character data type. The type character is exactly correct for name and sex, but not for number. So I converted it with the as.numeric() function to double.
+
 
 c)  Calculate the total number of babies born in Munich in 2022
     and 2021. Which year had the bigger baby-boom?
