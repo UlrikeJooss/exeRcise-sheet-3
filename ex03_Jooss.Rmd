@@ -75,7 +75,7 @@ c)  Regularly push your latest changes to GitHub again and especially do
     
   
 
-## Exercise 3: Baby-Names in Munich (4.5 Points)
+## Exercise 3: Baby-Names in Munich
 
 Download the latest open datasets on given names ("Vornamen") from the
 open data repository of the city of Munich for the years `2022` and
@@ -83,8 +83,13 @@ open data repository of the city of Munich for the years `2022` and
 
 Link: <https://opendata.muenchen.de/dataset/vornamen-von-neugeborenen>
 
-a)  Download the data for both years and track it in git. For small
-    datasets like these adding them to git is not a problem.
+
+## Exercise 3a) 
+Download the data for both years and track it in git. For small
+    datasets like these adding them to git is not a problem:
+
+Uploaded to Github and Pulled Down into may Project.  
+
 
 b)  Load the data for both years into R. Check the type of the count
     variable ("Anzahl") and look into the data to determine why it is
