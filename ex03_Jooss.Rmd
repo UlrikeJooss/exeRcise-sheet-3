@@ -1,8 +1,11 @@
 ---
-title: "Exercise #X"
+title: "Exercise #03"
 subtitle: "Fortgeschrittene Statistische Software für NF - SS 2022/23"
-author: "Name (Martrikelnummer), Name (Martrikelnummer), ..."
+author: "C. Ulrike Jooss (Matrikel-Nr. 17000859)"
 date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: distill::distill_article
 ---
 
 ## General Remarks
