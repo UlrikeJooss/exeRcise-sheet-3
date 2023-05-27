@@ -59,21 +59,21 @@ generated when knitting the sheet e.g. the HTML page. Ignore these files, as we
 
 For this task you will upload your solution to GitHub.
 
-## Erxercise 2a)
-
-Create a new repository on GitHub in your account name `exeRcise-sheet-3`. Make sure you create a **public repository** so
+a) Create a new repository on GitHub in your account name `exeRcise-sheet-3`. Make sure you create a **public repository** so
  we are able to see it for grading. Add the link to the repository below:
 
 My Public Repository:
 https://github.com/UlrikeJooss/exeRcise-sheet-3.git
 
 
-    
 b)  Push your code to this new repository by copying and executing the
     snippet on github listed under
-    `…or push an existing repository from the command line`.
+    `…or push an existing repository from the command line`: DONE
+    
 c)  Regularly push your latest changes to GitHub again and especially do
-    so when you are finished with this sheet.
+    so when you are finished with this sheet: Always Doing
+    
+  
 
 ## Exercise 3: Baby-Names in Munich (4.5 Points)
 
