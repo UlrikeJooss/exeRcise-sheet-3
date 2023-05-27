@@ -4,8 +4,8 @@ subtitle: "Fortgeschrittene Statistische Software für NF - SS 2022/23"
 author: "C. Ulrike Jooss (Matrikel-Nr. 17000859)"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: default
   html_document: distill::distill_article
+  pdf_document: default
 ---
 
 
@@ -35,13 +35,25 @@ For all of the following tasks in this exercise sheet we ask you to always commi
 Name 2 strengths and 2 weaknesses of git. 
 (Don't forget to create a commit after this answer, see *1c*):
 
+Strengths of Git:
+
+1. Distributed Version Control: Git is a distributed version control system, which means that every user has a complete copy of the repository, including its entire history. This allows for offline work, easy branching and merging, and provides resilience in case of server failures.
+
+2. Fast and Efficient: Git is designed to be fast and efficient, even with large codebases. It uses advanced algorithms for data storage and retrieval, allowing for quick operations such as commits, branching, and merging. Additionally, Git performs most operations locally, reducing the need for network communication.
+
+Weaknesses of Git:
+
+1. Steep Learning Curve: Git has a steep learning curve, especially for users who are new to version control systems. Understanding the concepts of branches, commits, and merges can be challenging initially, and it may take time and practice to become proficient in using Git effectively.
+
+2. Complex Command Line Interface: While Git provides a command line interface, some users may find it overwhelming or less user-friendly compared to graphical user interfaces (GUIs). The command-line nature of Git requires users to remember and execute specific commands accurately, which can be daunting for beginners.
 
 
+## Erxercise 1e)  
+
+Knit this exercise sheet. Some new files will automatically be
+generated when knitting the sheet e.g. the HTML page. Ignore these files, as we only want to track the source files themselves.
 
 
-e)  Knit this exercise sheet. Some new files will automatically be
-    generated when knitting the sheet e.g. the HTML page. Ignore these
-    files, as we only want to track the source files themselves.
 
 ## Exercise 2: Putting your Repository on GitHub (3.5 Points)
 
