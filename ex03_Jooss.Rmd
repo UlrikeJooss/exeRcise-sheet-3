@@ -276,16 +276,54 @@ row_means
 
 ###Calculate column-wise means
 
-```{r}
-
-column_means <- lapply(tax_data[, -1], 2, mean)
+column_means \ <- lapply(tax_data[, -1], 2, mean)
 
 column_means
 
+1) Step 1: 
+First Issue found without ChatGPT: 
+Backslash `("\")` before `("<-")` deleted
+
+2) Step 2: My Prompt to ChatGPT:
+
+column_means <- lapply(tax_data[, -1], 2, mean)
+column_means
+what`s wrong?
+
+
+ChatGPT: 
+The issue with the code lapply(tax_data[, -1], 2, mean) is that the lapply function is being used incorrectly. 
+The second argument of lapply should be a function, but in your code, 2 is passed as the second argument. 
+This results in an error because 2 is not a valid function.
+
+To calculate the column means using lapply, you should provide the mean function directly as the second argument to lapply, like this:
+
+column_means <- lapply(tax_data[, -1], mean)
+
+
+```{r}
+
+column_means <- lapply(tax_data[, -1], mean)
+column_means
+
+```
+
+Additionally the bot gave this information for a better output:
+
+If you want to convert the column means to a numeric vector, you can use unlist function:
+column_means <- unlist(column_means)
+Now, you can print the column_means to see the calculated column means:
+
+
+```{r}
+
+column_means2 <- unlist(column_means)
+column_means2
 
 ```
 
 
+Exercise 4b)
 
 b)  Using ChatGPT try to understand what the rapply() function does.
     Create an easy example with mock data where the function is used and
