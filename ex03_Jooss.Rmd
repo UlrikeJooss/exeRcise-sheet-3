@@ -150,8 +150,6 @@ total_births_2022 # 9899
 
 # compare:
 
-compare_births <- function(total_births_2021, total_births_2022) {
-  
   if (total_births_2021 > total_births_2022) {
     result <- "2021 had the bigger baby-boom."
   } else if (total_births_2022 > total_births_2021) {
@@ -159,10 +157,9 @@ compare_births <- function(total_births_2021, total_births_2022) {
   } else {
     result <- "Both years had an equal number of births."
   }
-  return(result)
-}
+  
+result
 
-compare_births(total_births_2021, total_births_2022)
 
 ```
 
@@ -213,8 +210,9 @@ knitr::kable(name_counts,
 col.names = c("Name","Number"),
 caption = "<b>Top 10 Most Popular Names in 2021 and 2022</b>",
   align = c("l","r"),
-  font_size = 12,
+  font_size = 11,
   row.names = TRUE)
+
 
 ```
 
