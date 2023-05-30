@@ -308,7 +308,7 @@ column_means
 
 ```
 
-Additionally the bot gave this information for a better output:
+Additionally the bot gave this information for a better output (without having asked before):
 
 If you want to convert the column means to a numeric vector, you can use unlist function:
 column_means <- unlist(column_means)
@@ -323,11 +323,80 @@ column_means2
 ```
 
 
-Exercise 4b)
+## Exercise 4b)
 
-b)  Using ChatGPT try to understand what the rapply() function does.
-    Create an easy example with mock data where the function is used and
-    explain it in your words.
+Using ChatGPT try to understand what the rapply() function does. Create an easy example with mock data where the function is used and explain it in your words:
+
+My Prompt:
+I try to understand what the rapply() function does. Create an easy example with mock data where the function is used and explain it in your words
+
+ChatGPT:
+
+The rapply() function in R is used to recursively apply a function to elements of a list or nested list structure. It is particularly useful when you have a nested list with multiple levels and you want to apply a specific function to elements at each level.
+
+Here's an example to demonstrate the usage of rapply():
+
+# Define a nested list structure
+my_list <- list(
+  a = 1,
+  b = list(
+    c = 2,
+    d = list(
+      e = 3,
+      f = 4
+    )
+  )
+)
+
+# Define a function to square a numeric value
+square <- function(x) {
+  x^2
+}
+
+# Apply the square function recursively using rapply
+result <- rapply(my_list, square, how = "replace")
+
+# Print the result
+print(result)
+
+```{r}
+
+# Define a nested list structure
+my_list <- list(
+  a = 1,
+  b = list(
+    c = 2,
+    d = list(
+      e = 3,
+      f = 4
+    )
+  )
+)
+
+# Define a function to square a numeric value
+square <- function(x) {
+  x^2
+}
+
+# Apply the square function recursively using rapply
+result <- rapply(my_list, square, how = "replace")
+
+# Print the result
+print(result)
+
+
+```
+
+Btw, I sent this prompt to the bot (because the bot always uses print()): 
+
+Hint for the future: better us `return(result)` or simply `result` instead of `print()`
+
+ChatGPT: 
+You're absolutely right, using return(result) or simply result instead of print(result) is a better practice when working with functions.
+
+.. and adapted the code. 
+
+I will see in the future if GPT will learn this ..
 
 ## Final Note
 
