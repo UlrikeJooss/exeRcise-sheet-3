@@ -217,29 +217,75 @@ caption = "<b>Top 10 Most Popular Names in 2021 and 2022</b>",
 ```
 
 
-
-
 ## Exercise 4: Chat GPT + apply (3 points)
 
-For this task: Specifically use ChatGPT to solve the task and submit
-your prompts in addition to the solution
+For this task: Specifically use ChatGPT to solve the task and submit your prompts in addition to the solution
 
-a)  The code below does not work because the wrong apply function has
-    been used. Find out which apply function would be correct and why it
-    did not work. Correct the code. Also calculate the rowwise means.
+## Exercise 4a)
+
+The code below does not work because the wrong apply function has been used. Find out which apply function would be correct and why it  did not work. Correct the code. Also calculate the rowwise means.
 
 ###Create a sample data frame
 
-tax_data \<- data.frame( Name = c("Munich GmbH", "ABC Inc.", "Backpacks
+tax_data \ <- data.frame( Name = c("Munich GmbH", "ABC Inc.", "Backpacks
 1980", "Bavarian Circus"), Tax_2019 = c(5000, 4000, 6000, 3500),
 Tax_2020 = c(4800, 4200, 5800, 3700), Tax_2021 = c(5200, 3800, 5900,
 3400) )
 
-###Calculate column-wise means
+tax_data
 
-column_means \<- lapply(tax_data\[, -1\], 2, mean)
+1) Step 1: 
+First Issue found without ChatGPT: 
+Backslash `("\")` before `("<-")` deleted
+
+2) Step 2: My Prompt to ChatGPT:
+
+The code below does not work because the wrong apply function has been used. Find out which apply function would be correct and why it  did not work. Correct the code. Also calculate the rowwise means. 
+tax_data <- data.frame( Name = c("Munich GmbH", "ABC Inc.", "Backpacks
+1980", "Bavarian Circus"), Tax_2019 = c(5000, 4000, 6000, 3500),
+Tax_2020 = c(4800, 4200, 5800, 3700), Tax_2021 = c(5200, 3800, 5900,
+3400) )
+column_means <- lapply(tax_data[, -1], 2, mean)
+column_means
+
+ChatGPT: 
+Two Issues found: 
+- `sapply`statt `lapply`
+- the `2`argument is incorrect
+Displayed the corrected code with explainings:
+
+
+```{r}
+
+tax_data <- data.frame(
+  Name = c("Munich GmbH", "ABC Inc.", "Backpacks 1980", "Bavarian Circus"),
+  Tax_2019 = c(5000, 4000, 6000, 3500),
+  Tax_2020 = c(4800, 4200, 5800, 3700),
+  Tax_2021 = c(5200, 3800, 5900, 3400)
+)
+
+column_means <- sapply(tax_data[, -1], mean)
+row_means <- apply(tax_data[, -1], 1, mean)
 
 column_means
+row_means
+
+```
+
+
+
+###Calculate column-wise means
+
+```{r}
+
+column_means <- lapply(tax_data[, -1], 2, mean)
+
+column_means
+
+
+```
+
+
 
 b)  Using ChatGPT try to understand what the rapply() function does.
     Create an easy example with mock data where the function is used and
