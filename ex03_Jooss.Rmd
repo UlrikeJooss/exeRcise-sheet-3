@@ -218,7 +218,7 @@ caption = "<b>Top 10 Most Popular Names in 2021 and 2022</b>",
 ```
 
 
-## Exercise 4: Chat GPT + apply (3 points)
+## Exercise 4: Chat GPT + apply
 
 For this task: Specifically use ChatGPT to solve the task and submit your prompts in addition to the solution
 
@@ -354,10 +354,10 @@ square <- function(x) {
   x^2
 }
 
-# Apply the square function recursively using rapply
+### Apply the square function recursively using rapply
 result <- rapply(my_list, square, how = "replace")
 
-# Print the result
+### Print the result
 print(result)
 
 ```{r}
@@ -387,6 +387,18 @@ print(result)
 
 
 ```
+
+
+```{r}
+
+# my addition (learned from ChatGPT before in 4a)):
+
+result2 <- unlist(result)
+result2
+
+
+```
+
 
 
 ## Final Note
