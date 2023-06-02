@@ -139,7 +139,7 @@ vornamen_2021$Anzahl <- ifelse(
     is.na(vornamen_2021$Anzahl), 0, vornamen_2021$Anzahl)
 
 total_births_2021 <- sum(vornamen_2021$Anzahl)
-total_births_2021 # 11524	
+# total_births_2021 # 11524	
 
 # 2022
 
@@ -147,7 +147,7 @@ vornamen_2022$Anzahl <- ifelse(
     is.na(vornamen_2022$Anzahl), 0, vornamen_2022$Anzahl)
 
 total_births_2022 <- sum(vornamen_2022$Anzahl)
-total_births_2022 # 9899
+# total_births_2022 # 9899
 
 # compare:
 
