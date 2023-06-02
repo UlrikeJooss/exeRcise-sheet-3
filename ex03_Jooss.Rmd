@@ -226,7 +226,7 @@ For this task: Specifically use ChatGPT to solve the task and submit your prompt
 
 The code below does not work because the wrong apply function has been used. Find out which apply function would be correct and why it  did not work. Correct the code. Also calculate the rowwise means.
 
-###Create a sample data frame
+### Create a sample data frame
 
 tax_data \ <- data.frame( Name = c("Munich GmbH", "ABC Inc.", "Backpacks
 1980", "Bavarian Circus"), Tax_2019 = c(5000, 4000, 6000, 3500),
@@ -275,7 +275,7 @@ row_means
 
 
 
-###Calculate column-wise means
+### Calculate column-wise means
 
 column_means \ <- lapply(tax_data[, -1], 2, mean)
 
