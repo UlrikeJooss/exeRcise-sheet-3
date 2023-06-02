@@ -251,9 +251,9 @@ column_means
 
 ChatGPT: 
 Two Issues found: 
-- `sapply`statt `lapply`
-- the `2`argument is incorrect
-Displayed the corrected code with explainings:
+- use `sapply` instead of `lapply`
+- the `2` argument is incorrect
+- Displayed the corrected code with explainings:
 
 
 ```{r}
@@ -337,7 +337,7 @@ The rapply() function in R is used to recursively apply a function to elements o
 
 Here's an example to demonstrate the usage of rapply():
 
-# Define a nested list structure
+###  Define a nested list structure
 my_list <- list(
   a = 1,
   b = list(
@@ -349,7 +349,7 @@ my_list <- list(
   )
 )
 
-# Define a function to square a numeric value
+### Define a function to square a numeric value
 square <- function(x) {
   x^2
 }
@@ -388,16 +388,6 @@ print(result)
 
 ```
 
-Btw, I sent this prompt to the bot (because the bot always uses print()): 
-
-Hint for the future: better is `return(result)` or simply `result` instead of `print()`
-
-ChatGPT: 
-You're absolutely right, using return(result) or simply result instead of print(result) is a better practice when working with functions.
-
-.. and adapted the code. 
-
-I will see in the future if GPT will learn this ..
 
 ## Final Note
 
